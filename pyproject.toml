@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lerobot-libero"
+version = "0.1.0"
+description = "LIBERO benchmark environments for LeRobot"
+authors = [
+    { name = "Jade Choghari", email = "jade.choghari@huggingface.co" },
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+
+dependencies = [
+    "gymnasium>=0.29.1",
+    "numpy",
+    "torch",
+    "hydra-core>=1.2,<1.4",
+    "easydict>=1.9",
+    "lerobot[transformers-dep]",
+    "robomimic==0.2.0",
+    "thop>=0.1.0.post2206102148",
+    "robosuite==1.4.0",
+    "bddl==1.0.1",
+    "matplotlib>=3.5.3",
+    "cloudpickle>=2.0.0",
+    "future>=0.18.3",
+    "transformers>=4.50.3,<4.52.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/huggingface/lerobot-libero"
+Issues = "https://github.com/huggingface/lerobot-libero/issues"
