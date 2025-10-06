@@ -35,7 +35,7 @@ dependencies = [
     "wandb",
 
     # gym: compatible range
-    "gym>=0.25,<0.27",
+    "gymnasium >= 0.29.0",
     "future>=0.18.2",
 ]
 
