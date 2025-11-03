@@ -89,6 +89,19 @@ python benchmark_scripts/download_libero_datasets.py --datasets DATASET --use-hu
 
 The datasets hosted on HuggingFace are available at [here](https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets).
 
+## Assets
+
+**IMPORTANT: Asset Loading from HuggingFace Hub**
+
+The simulation assets (3D models, textures, scene files, etc.) are now automatically loaded from HuggingFace Hub instead of being bundled with the package. When you first run LIBERO, the assets will be automatically downloaded from the Hub repository [yifengzhu-hf/LIBERO-assets](https://huggingface.co/yifengzhu-hf/LIBERO-assets) and cached locally.
+
+This change:
+- Reduces the size of the installed package
+- Ensures you always have the latest assets
+- Allows for easy asset versioning and updates
+
+The assets will be cached at `~/.cache/libero/assets/` and will only be downloaded once. If you have local assets installed from a previous version, those will be used instead.
+
 
 # Getting Started
 
