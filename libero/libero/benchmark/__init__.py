@@ -161,7 +161,13 @@ class Benchmark(abc.ABC):
             self.tasks[i].problem_folder,
             self.tasks[i].init_states_file,
         )
-        init_states = torch.load(init_states_path)
+        # LIBERO init-state files are serialized Python objects, not plain tensor weights.
+        # PyTorch >=2.6 defaults to weights_only=True, which breaks loading these files.
+        try:
+            init_states = torch.load(init_states_path, weights_only=False)
+        except TypeError:
+            # Backward compatibility with older torch versions that don't support weights_only.
+            init_states = torch.load(init_states_path)
         return init_states
 
     def set_task_embs(self, task_embs):
