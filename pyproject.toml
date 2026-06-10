@@ -14,8 +14,8 @@ readme = "README.md"
 requires-python = ">=3.8"
 
 dependencies = [
-    # egl probe: canonical repo
-    "egl_probe @ git+https://github.com/huggingface/egl_probe.git#egg=egl_probe",
+    # egl probe: https://github.com/huggingface/egl_probe.git
+    "hf-egl-probe",
 
     # core runtime / reproducible pins
     "hydra-core>=1.2,<1.4",
