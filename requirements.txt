@@ -1,6 +1,6 @@
-# egl probe: point to canonical repo or a particular commit/tag
-# we use the canonical HF repo unless you need changes from a fork.
-egl_probe @ git+https://github.com/huggingface/egl_probe.git#egg=egl_probe
+# egl probe: we use the canonical HF repo.
+hf-egl-probe
+
 # core runtime / reproducible pins where necessary
 hydra-core>=1.2,<1.4 # >=1.2 and <1.4 matches other code expecting hydra 1.2.x
 robomimic==0.2.0 # required exact version in your stacks
