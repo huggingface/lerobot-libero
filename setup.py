@@ -27,7 +27,7 @@ setup(
     description="LIBERO: Benchmarking Knowledge Transfer for Lifelong Robot Learning",
     author="Bo Liu, Yifeng Zhu, Chongkai Gao, Yihao Feng, Qiang Liu, Yuke Zhu, Peter Stone",
     author_email="bliu@cs.utexas.edu, yifengz@cs.utexas.edu",
-    version="0.1.0",
+    version="0.1.4",
     long_description=long_description,
     long_description_content_type="text/markdown",
     entry_points={
